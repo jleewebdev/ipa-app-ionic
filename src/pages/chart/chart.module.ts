@@ -10,4 +10,6 @@ import { ChartPage } from './chart';
     IonicPageModule.forChild(ChartPage),
   ],
 })
-export class ChartPageModule {}
+export class ChartPageModule {
+
+}

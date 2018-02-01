@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpModule} from '@angular/http';
 
 import { MyApp } from './app.component';
 
@@ -11,6 +12,10 @@ import { ChartPage } from "../pages/chart/chart";
 import { MorePage } from "../pages/more/more";
 import { PracticePage } from "../pages/practice/practice";
 import { SearchPage } from "../pages/search/search";
+
+import { IpaService } from "../services/ipa";
+import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
+import { NativeAudio } from "@ionic-native/native-audio";
 
 @NgModule({
   declarations: [
@@ -37,7 +42,10 @@ import { SearchPage } from "../pages/search/search";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    IpaService,
+    SmartAudioProvider,
+    NativeAudio
   ]
 })
 export class AppModule {}

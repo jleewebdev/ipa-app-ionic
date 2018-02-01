@@ -1,3 +1,24 @@
 page-chart {
+ 
+  .underline {
+    text-decoration: underline;
+  }
 
+  .very-close {
+    margin: 0;
+    padding: 0;
+    letter-spacing: -1px;
+  }
+
+  .ipa-item {
+    text-transform: lowercase
+  }
+
+  .ipa-split-letter {
+    font-size: 12px;
+  }
+
+  .consonants-title {
+    margin-top: 0;
+  }
 }
