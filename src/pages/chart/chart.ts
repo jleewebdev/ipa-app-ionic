@@ -24,14 +24,6 @@ export class ChartPage {
     this.consonants = this.ipaService.getConsonants();
   }
 
-  ionViewDidLoad() {
-    console.log("Vowels")
-    console.log(this.ipaService.getVowels());
-    console.log("getConsonants")
-    console.log(this.ipaService.getConsonants());
-    // console.log("Array is")
-    // console.log(this.ipaService.arrayForChart().vowels[0])
-  }
 
   playAudio(key) {
     // console.log(key)

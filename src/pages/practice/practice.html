@@ -8,19 +8,64 @@
 
 
 <ion-content padding>
-  <h1>Word prompt</h1>
-  <p>Audio</p>
-  <p>Ipa</p>
-  <p>Def</p>
-  <p>Sentence</p>
-  <p>Chinese</p>
+  <div text-center>
+    <h1 class="word-prompt">{{word}}</h1>
+    <p *ngIf="showAnswer"
+        class="answer">
+        {{pronunciations}}
+    </p>
+
+  </div>
 
 
-  <p>list of ipa</p>
+  <div id="attempt">{{attempt}}</div>
 
-  <button ion-button>
-    Submit
-  </button>
+  <div id="ipa-keyboard">
+    <button ion-button 
+            small 
+            text-center
+            (click)="addToAttempt(item.ipa)"
+            class="ipa-item ipa-keyboard-key"
+            *ngFor="let item of alphabet">
+      {{item.ipa}} 
+    </button>
+  </div>
+
+  <ion-grid>
+    <ion-row *ngIf="!showAnswer">
+      <ion-col col-10>
+        <button ion-button 
+                block
+                color="secondary"
+                (click)="makeAttempt()">
+          Submit
+        </button>
+      </ion-col>
+      
+      <ion-col col-2>
+        <button ion-button
+                icon-only 
+                block
+                color="danger"
+                (click)="removeLastEntry()">
+          <ion-icon name="backspace"></ion-icon>
+        </button>
+      </ion-col>
+
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button
+                block
+                color="secondary"
+                *ngIf="showAnswer"
+                (click)="newAttempt()">
+          New
+        </button>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
 
 
 </ion-content>

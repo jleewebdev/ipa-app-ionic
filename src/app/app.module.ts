@@ -14,6 +14,7 @@ import { PracticePage } from "../pages/practice/practice";
 import { SearchPage } from "../pages/search/search";
 
 import { IpaService } from "../services/ipa";
+import { DictionaryService } from "../services/dictionary";
 import { SmartAudioProvider } from '../providers/smart-audio/smart-audio';
 import { NativeAudio } from "@ionic-native/native-audio";
 
@@ -28,7 +29,8 @@ import { NativeAudio } from "@ionic-native/native-audio";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,6 +46,7 @@ import { NativeAudio } from "@ionic-native/native-audio";
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     IpaService,
+    DictionaryService,
     SmartAudioProvider,
     NativeAudio
   ]

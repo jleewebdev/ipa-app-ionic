@@ -304,7 +304,7 @@ export default [
    "id": 38
  },
  {
-   "ipa": "\nŋ",
+   "ipa": "ŋ",
    "vowel_or_consonant": "consonant",
    "voiced_or_unvoiced": "voiced",
    "word": "sing",

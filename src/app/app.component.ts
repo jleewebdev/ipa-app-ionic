@@ -24,7 +24,6 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
-      console.log(secrets.DICTIONARY)
       // console.log("length")
       // console.log(this.ipaService.getAlphabet().length)
 

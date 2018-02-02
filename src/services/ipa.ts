@@ -8,6 +8,7 @@ export class IpaService {
   }
 
 
+
   getVowels() {
     return ipaAlphabet.filter(function(el) {
       return el.vowel_or_consonant === "vowel"
